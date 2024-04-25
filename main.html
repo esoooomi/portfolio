@@ -6,6 +6,50 @@
     <title>SUMZ PORTFOLIO</title>
 </head>
 <body>
-    TEST
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        #passwordInput {
+            margin-bottom: 10px;
+        }
+        #details {
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Welcome to the One Page Website</h1>
+        <div id="passwordInput">
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="details">
+            <p>This is the detailed content you wanted to see.</p>
+        </div>
+    </div>
+    
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "1234") {
+                document.getElementById("passwordInput").style.display = "none";
+                document.getElementById("details").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+
+
+    
 </body>
 </html>
